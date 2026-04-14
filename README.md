@@ -168,7 +168,8 @@ Austim_FMRI_Classification/
 
 ## Citation / Acknowledgments
 
-If you use public datasets (e.g., ABIDE I/II), please cite their papers and follow their license terms.
+ABIDE I/II
+https://fcon_1000.projects.nitrc.org/indi/abide/abide_II.html
 
 ---
 
