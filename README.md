@@ -85,9 +85,9 @@ All steps are implemented in the notebooks with clear, editable parameters.
 
 **Split**: 80/20 stratified subject split (no subject leakage)
 
-| Data       | Acc  |
-| ---------- | ---- |
-| Test       | 0.70 |
+| Data       | Acc  | Loss |
+| ---------- | ---- | ---- |
+| Test       | 0.70 | 0.14 |
 
 * **Reproducibility**: fixed random seeds and deterministic data splits where possible.
 
