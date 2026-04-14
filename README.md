@@ -10,7 +10,7 @@ End‑to‑end notebooks for classifying Autism Spectrum Condition (ASC) vs. Con
 
 ---
 
-## Quick Overview
+## Overview
 
 * **Task**: Binary classification (ASC vs. Control) from resting‑state fMRI; optional T1/anatomical features.
 * **Modalities**: rs‑fMRI (required), T1/anatomical MRI (optional, if available).
@@ -26,8 +26,8 @@ End‑to‑end notebooks for classifying Autism Spectrum Condition (ASC) vs. Con
 
 This project expects **resting‑state fMRI NIfTI files** (optionally T1 anatomical NIfTI). You can run on:
 
-* **Public datasets** such as ABIDE I/II (download separately and comply with their licenses), or
-* **Your own dataset** organized in subject folders.
+* **Public datasets** such as ABIDE I/II (found here: https://fcon_1000.projects.nitrc.org/indi/abide/abide_II.html), or
+* **Custom dataset** organized in subject folders.
 
 **Typical folder layout**
 
@@ -43,7 +43,7 @@ Data/
 labels.csv                 # columns: subject_id,label (0=Control, 1=ASC)
 ```
 
-> 📝 The notebooks include cells to adapt paths, filename patterns, and label CSV formats for your data.
+> 📝 The notebooks include cells to adapt paths, filename patterns, and label CSV formats the data.
 
 ---
 
@@ -80,19 +80,15 @@ All steps are implemented in the notebooks with clear, editable parameters.
 
 ---
 
-## Results (example template)
+## Results
 
-> Replace with your actual run results; the cells print metrics/tables.
 
 **Split**: 80/20 stratified subject split (no subject leakage)
 
-| Data       | Acc  | ROC‑AUC | F1   |
-| ---------- | ---- | ------- | ---- |
-| Train      | 0.85 | 0.91    | 0.84 |
-| Validation | 0.80 | 0.86    | 0.79 |
-| Test       | 0.78 | 0.83    | 0.77 |
+| Data       | Acc  |
+| ---------- | ---- |
+| Test       | 0.70 |
 
-* **Confusion Matrix** and **ROC curves** are plotted in‑notebook.
 * **Reproducibility**: fixed random seeds and deterministic data splits where possible.
 
 ---
@@ -116,7 +112,7 @@ pip install numpy pandas scikit-learn xgboost nibabel nilearn matplotlib torch t
 
 > If you prefer TensorFlow/Keras, swap the DL dependencies accordingly.
 
-> 📦 GPU strongly recommended for the DL notebook.
+> 📦 GPU needed.
 
 ---
 
@@ -141,8 +137,8 @@ pip install numpy pandas scikit-learn xgboost nibabel nilearn matplotlib torch t
 ## Reproducibility
 
 * Deterministic train/val/test subject split with fixed seed.
-* Version your environment with `pip freeze > requirements.txt`.
-* Save trained weights and results under `artifacts/` with a run ID.
+* Version your environment.
+* Save trained weights and results with a run ID.
 
 ---
 
@@ -178,4 +174,4 @@ If you use public datasets (e.g., ABIDE I/II), please cite their papers and foll
 
 ## License
 
-This project is released under the MIT License (update as appropriate).
+This project is released under the MIT License.
